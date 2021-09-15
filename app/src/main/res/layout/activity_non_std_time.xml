@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_blue"
+    tools:context=".NonStdTimeActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <TextView
+        android:id="@+id/label_time_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10sp"
+        android:text="@string/time_setting_info"
+        android:textAlignment="center"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/header_noh_std_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10sp"
+        android:text="@string/header_non_std_time"
+        android:textAlignment="center"
+        android:textColor="@color/purple_500"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@id/label_time_info" />
+
+    <TextView
+        android:id="@+id/label_time_hh"
+        android:layout_width="60sp"
+        android:layout_height="wrap_content"
+        android:padding="10sp"
+        android:text="HH"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintRight_toLeftOf="@id/guideline1"
+        app:layout_constraintTop_toBottomOf="@id/header_noh_std_time" />
+
+    <TextView
+        android:id="@+id/vs1"
+        android:layout_width="30sp"
+        android:layout_height="wrap_content"
+        android:padding="10sp"
+        android:text=":"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toRightOf="@id/guideline1"
+        app:layout_constraintTop_toBottomOf="@id/header_noh_std_time" />
+
+    <TextView
+        android:id="@+id/label_time_mm"
+        android:layout_width="60sp"
+        android:layout_height="wrap_content"
+        android:padding="10sp"
+        android:text="MM"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/vs1"
+        app:layout_constraintTop_toBottomOf="@id/header_noh_std_time" />
+
+    <TextView
+        android:id="@+id/vs2"
+        android:layout_width="30sp"
+        android:layout_height="wrap_content"
+        android:padding="10sp"
+        android:text=":"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/label_time_mm"
+        app:layout_constraintTop_toBottomOf="@id/header_noh_std_time" />
+
+    <TextView
+        android:id="@+id/label_time_ss"
+        android:layout_width="60sp"
+        android:layout_height="wrap_content"
+        android:padding="10sp"
+        android:text="SS"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/vs2"
+        app:layout_constraintTop_toBottomOf="@id/header_noh_std_time" />
+
+
+    <EditText
+        android:id="@+id/time_hh"
+        android:layout_width="60sp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:padding="10sp"
+        android:text="00"
+        android:textAlignment="center"
+        android:textColor="@color/color_accent"
+        android:textSize="16sp"
+        app:layout_constraintRight_toLeftOf="@id/guideline1"
+        app:layout_constraintTop_toBottomOf="@id/label_time_hh" />
+
+    <TextView
+        android:id="@+id/vs3"
+        android:layout_width="30sp"
+        android:layout_height="wrap_content"
+        android:padding="10sp"
+        android:text=":"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toRightOf="@id/guideline1"
+        app:layout_constraintTop_toBottomOf="@id/vs1" />
+
+    <EditText
+        android:id="@+id/time_mm"
+        android:layout_width="60sp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:padding="10sp"
+        android:text="00"
+        android:textAlignment="center"
+        android:textColor="@color/color_accent"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/vs3"
+        app:layout_constraintTop_toBottomOf="@id/label_time_mm" />
+
+    <TextView
+        android:id="@+id/vs4"
+        android:layout_width="30sp"
+        android:layout_height="wrap_content"
+        android:padding="10sp"
+        android:text=":"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/time_mm"
+        app:layout_constraintTop_toBottomOf="@id/vs2" />
+
+    <EditText
+        android:id="@+id/time_ss"
+        android:layout_width="60sp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:padding="10sp"
+        android:text="00"
+        android:textAlignment="center"
+        android:textColor="@color/color_accent"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/vs4"
+        app:layout_constraintTop_toBottomOf="@id/label_time_ss" />
+
+    <TextView
+        android:id="@+id/label_mode_switch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:padding="10sp"
+        android:text="Time Interval - Date/Time"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/time_hh" />
+
+    <Switch
+        android:id="@+id/mode_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/label_mode_switch" />
+
+    <TextView
+        android:id="@+id/header_trigger_at"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:padding="10sp"
+        android:text="@string/header_date_time"
+        android:textAlignment="center"
+        android:textColor="@color/purple_500"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@id/mode_switch" />
+
+    <TextView
+        android:id="@+id/date_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10sp"
+        android:text="2021, Aug 21, 08:00"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/header_trigger_at" />
+
+    <Button
+        android:id="@+id/btn_pick_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/gradient"
+        android:onClick="buttonClicked"
+        android:padding="20dp"
+        android:text="@string/btn_set_date"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@id/btn_pick_time"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/date_time" />
+
+    <Button
+        android:id="@+id/btn_pick_time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/gradient"
+        android:onClick="buttonClicked"
+        android:padding="20dp"
+        android:text="@string/btn_set_time"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_pick_date"
+        app:layout_constraintTop_toBottomOf="@id/date_time" />
+
+    <Button
+        android:id="@+id/btn_time_ok"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/gradient"
+        android:onClick="buttonClicked"
+        android:padding="20dp"
+        android:text="@string/btn_ok"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn_time_cancel"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_time_cancel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/gradient"
+        android:onClick="buttonClicked"
+        android:padding="20dp"
+        android:text="@string/btn_cancel"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_time_ok" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
